@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:36:18 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:54:33 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/10 19:52:06 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char *ft_strrchr(const char *s, int c)
 
 	ltr = (char)c;
 	i = ft_strlen((char *)s);
-	while (i)
+	while (i >= 0)
 	{
 		if (s[i] == ltr)
 			return (char *)s+i;

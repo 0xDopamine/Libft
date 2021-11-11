@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 19:14:41 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:53:26 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/09 18:24:49 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,20 @@ int	ft_memcmp(const void *str, const void *str2, size_t n)
 	int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] && s2[i] && i < (int)n)
+	if (n == 0)
+		return 0;
+	while (s1[i] == s2[i] && i < (int)n - 1)
 		i++;
 	return (s1[i] - s2[i]);
 }
 
 /*int	main(int argc, char **argv)
 {
+	char s[] = {-128, 0, 127, 0};
+	char sCpy[] = {-128, 0, 127, 0};
+	char s2[] = {0, 0, 127, 0};
+	char s3[] = {0, 0, 42, 0};
 	(void)argc;
-	printf("%d\n%d", ft_memcmp((const void *)argv[1], 
-				(const void *)argv[2], 5), memcmp((const void *)argv[1], (const void *)argv[2], 5));
+	printf("%d\n%d", ft_memcmp(s, s2, 0), memcmp(s, s2, 0));
 	
 }*/

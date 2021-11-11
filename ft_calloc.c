@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:54:34 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:53:27 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/11 12:52:44 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < (int)n)
 	{
-		str[i] = '0';
+		str[i] = '\0';
 		i++;
     }
 }

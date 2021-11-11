@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:51:38 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:53:21 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/10 18:40:05 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,27 @@ void    *ft_memmove(void *str1, const void *str2, size_t n)
 {
     int    i;
     int    j;
-    char *dest = (char *)str1;
-    char *src = (char *)str2;          
 
+    char *src = (char *)str2;
+    char *dest = (char *)str1;
     i = 0;
     j = 0;
-	if (src == 0 && dest == 0)
-		return (0);
-    if (src > dest)
-    {    
-        while (src[i] && i < (int)n)
-        {
-            src[i] = dest[j];
-            j++;
-            i++;
-        }
+    if ((char *)str2 == 0 || (char *)str1 == 0)
+        return (0);
+    if (dest > src)
+    {
+      while (n--)
+        *(dest + n) = *(src + n);
     }
-    if (src < dest)
-    {    
-        while (src[i] && i < (int)n)
-        {
-            dest[j] = src[i];
-            j++;
-            i++;
-        }
+    else
+    {
+      while (i < (int)n)
+      {
+        *(dest + i) = *(src + j);
+        i++;
+        j++;
+      }
+      
     }
     return dest;
     
@@ -51,8 +48,8 @@ void    *ft_memmove(void *str1, const void *str2, size_t n)
 /*int    main()
 {
     //char src[50] = "abcdef";
-    char dest[50] = "HigdwiqdiqhIg";
+    char dest[50] = "Hello";
 
-    printf("theirs: %s\nmine: %s", memmove(dest+4, dest+8, 10), ft_memmove(dest+4, dest+8, 10));
+    printf("%s\n%s", ft_memmove(dest, dest+2, 4), memmove(dest, dest+2, 4));
     return 0;
 }*/

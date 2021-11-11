@@ -25,5 +25,8 @@ char	*ft_strnstr(const char *big, const char *small, size_t len);
 char    *ft_strrchr(const char *s, int c);
 int     ft_tolower(int ch);
 int     ft_toupper(int ch);
+char    *ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strtrim(char const *s1, char const *set);
+char	*ft_strjoin(int size, char **strs, char *sep);
 
 #endif
