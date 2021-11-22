@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 11:30:22 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/21 12:49:17 by mbaioumy         ###   ########.fr       */
+/*   Created: 2021/11/20 13:21:07 by mbaioumy          #+#    #+#             */
+/*   Updated: 2021/11/22 17:19:12 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void    ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int	i;
+    t_list *curr;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && i < n - 1)
-	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			break ;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    curr = lst;
+    while (curr)
+    {
+        f(curr->content);
+        curr = curr->next;
+    }
 }
-/*int	main()
-{
-	printf("%d", strncmp("ayman", "aymak", 5));
-	return 0;
-}*/

@@ -6,18 +6,16 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 18:53:50 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/09 16:48:15 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/20 13:36:32 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	char ltr = (char)c;
-
-	if (ltr >= 65 && ltr <= 90)
-		return 1;
-	if (ltr >= 97 && ltr <= 122)
-		return 1;
+	if (c >= 65 && c <= 90)
+		return (1);
+	if (c >= 97 && c <= 122)
+		return (1);
 	else
-		return 0;
+		return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/13 11:00:03 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:54:13 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:54:18 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,13 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	l;
 
 	slen = len(src);
+	if (dest == NULL && size == 0)
+		return (slen);
 	dlen = len(dest);
 	l = size - dlen - 1;
 	j = dlen;
 	i = 0;
+	
 	if (size <= dlen)
 		return (slen + size);
 	while (src[i] && i < l)
@@ -57,5 +60,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	//int size = sizeof(str) / sizeof(char);
 	//int n = ft_strlcat(dest, str,3);
 	//int b = strlcat(dest2,str,3);
-	printf("%u %lui  %s   str2:%s", ft_strlcat(dest, str, 3), strlcat(dest2, str, 3), dest,dest2);
+	printf("str1: %u str2: %lu\nstr1: %s str2:%s", ft_strlcat(NULL, str, 0), strlcat(NULL, str, 0), dest,dest2);
 }*/

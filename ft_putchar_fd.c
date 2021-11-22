@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 11:30:22 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/21 12:49:17 by mbaioumy         ###   ########.fr       */
+/*   Created: 2021/11/15 14:54:10 by mbaioumy          #+#    #+#             */
+/*   Updated: 2021/11/20 17:02:46 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned int	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] && s2[i] && i < n - 1)
-	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			break ;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	write (fd, &c, 1);
 }
-/*int	main()
+
+/*int main()
 {
-	printf("%d", strncmp("ayman", "aymak", 5));
-	return 0;
+    int fd = open("test.txt", O_RDWR);
+    ft_putchar_fd('a', fd);
+    return 0;
 }*/

@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 10:27:43 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/06 11:29:22 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/20 16:33:15 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(char *src)
 	i = 0;
 	len = ft_strlen(src);
 	dest = (char *)malloc(sizeof(char) * len + 1);
+	if (!dest)
+		return (NULL);
 	while (src[i])
 	{
 		dest[i] = src[i];

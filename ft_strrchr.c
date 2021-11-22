@@ -6,19 +6,18 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 17:36:18 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/10 19:52:06 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/22 17:13:13 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-
-int	ft_strlen(char *str);
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	ltr;
+	unsigned int		i;
+	char				ltr;
 
 	ltr = (char)c;
 	i = ft_strlen((char *)s);
@@ -28,7 +27,7 @@ char *ft_strrchr(const char *s, int c)
 			return (char *)s+i;
 		i--;
 	}
-	return NULL;
+	return (NULL);
 }
 
 /*int	main(int argc, char **argv)

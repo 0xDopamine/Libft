@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 18:54:34 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 16:32:51 by mbaioumy         ###   ########.fr       */
+/*   Created: 2021/11/16 13:06:29 by mbaioumy          #+#    #+#             */
+/*   Updated: 2021/11/20 19:26:59 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_calloc (size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	unsigned int	len;
-	void			*ptr;
+	t_list	*lst;
 
-	len = count * size;
-	ptr = malloc(len * sizeof(char));
-	if (!ptr)
+	lst = (t_list *)malloc(sizeof(t_list));
+	if (!lst)
 		return (NULL);
-	ft_bzero(ptr, len);
-	return (ptr);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }
+/*
+int main()
+{
+    t_list root;
+    root.content = "dude";
+    root.next = malloc(sizeof(t_list));
+    root.next->content = "hey";
+    root.next->next = NULL;
+
+    printf("%s", (char *)ft_lstnew(root.content));
+    return 0;
+}*/

@@ -6,21 +6,17 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 08:53:55 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/08 15:59:39 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/20 13:40:11 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h>
-#include <stdio.h>
 
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return 1;
+		return (1);
 	else
 		return (0);
 }
-
 /*int main()
 {
 	char a, b, c, d, e, f;
@@ -46,4 +42,3 @@ int	ft_isprint(int c)
 	printf("e %d\n", isprint(e));
 	printf("f %d\n", isprint(f));
 }*/
-

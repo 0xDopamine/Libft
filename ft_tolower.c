@@ -6,18 +6,18 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:45:49 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:54:41 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:26:29 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_tolower(int ch)
+int	ft_tolower(int ch)
 {
-    if (ch >= 65 && ch <= 90)
-        ch += 32;
-    return ch;
+	if (ch >= 65 && ch <= 90)
+		ch += 32;
+	return (ch);
 }
 
 /*int main()

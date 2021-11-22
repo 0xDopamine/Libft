@@ -6,18 +6,18 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:33:24 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/07 15:54:51 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:25:50 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_toupper(int ch)
+int	ft_toupper(int ch)
 {
-    if (ch >= 97 && ch <= 122)
-        ch -= 32;
-    return ch;
+	if (ch >= 97 && ch <= 122)
+		ch -= 32;
+	return (ch);
 }
 
 /*int main()

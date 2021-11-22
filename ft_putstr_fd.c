@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 13:56:15 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 13:50:36 by mbaioumy         ###   ########.fr       */
+/*   Created: 2021/11/15 14:55:50 by mbaioumy          #+#    #+#             */
+/*   Updated: 2021/11/20 17:04:53 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
+#include "libft.h"
 #include <stdio.h>
-#include <string.h>
+#include <fcntl.h>
 
-void	*ft_memset(void *str, int c, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int		i;
-	char	*str1;
+	int	i;
 
-	str1 = (char *)str;
 	i = 0;
-	while (i < (int)n)
+	if (s)
 	{
-		str1[i] = c;
-		i++;
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
-	return (str);
 }
-/*int	main()
-{
-	char str[15] = "This is a nigga";
-	char str1[15] = "This is a nigga";
-	ft_memset(str, '$', sizeof(str));
-	printf("%s\n", str);
-	memset(str1, '$', sizeof(str1));
-	printf("%s", str1);
-	return 0;
+
+/*int main() {
+   int fd;
+   char *str = "Hello sat";
+
+   fd = open("test.txt", O_RDWR);
+   ft_putstr_fd(str, fd);
+   return 0;
 }*/
