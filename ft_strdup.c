@@ -6,19 +6,17 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 10:27:43 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 16:33:15 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:33:45 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-unsigned int	ft_strlen(char *str);
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
-	int				i;
-	unsigned int	len;
-	char			*dest;
+	int		i;
+	size_t	len;
+	char	*dest;
 
 	i = 0;
 	len = ft_strlen(src);

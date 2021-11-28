@@ -6,23 +6,20 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:55:10 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 13:51:57 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:52:56 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*str;
 
 	str = (char *)s;
 	i = 0;
-	while (i < (int)n)
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;

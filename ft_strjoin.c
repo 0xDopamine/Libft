@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:42:14 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 16:44:06 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:34:53 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,20 @@ char	*cat(char *dest, char const *s, int pos)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*tab;
-	int		total;
+	size_t	total;
 	int		i;
 	int		j;
 
 	j = 0;
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	total = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	total = ft_strlen(s1) + ft_strlen(s2) + 1;
 	i = 0;
 	tab = (char *)malloc(sizeof(char) * total + 1);
 	if (!tab)
 		return (NULL);
 	tab = cat(tab, s1, 0);
-	tab = cat(tab, s2, ft_strlen((char *)s1));
+	tab = cat(tab, s2, ft_strlen(s1));
 	return (tab);
 }
 

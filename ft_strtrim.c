@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:45:20 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/22 18:56:36 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:46:19 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		len;
-	int		start;
-	int		end;
+	size_t	i;
+	size_t	start;
+	size_t	end;
 	char	*str;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	len = ft_strlen((char *)s1);
 	i = 0;
-	while (ft_strchr(set, s1[i]))
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
+	if (s1[i] == '\0')
+		return (ft_strdup(""));
 	start = i;
-	i = len - 1;
-	while (ft_strchr(set, s1[i]))
+	i = ft_strlen((char *)s1) - 1;
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i--;
 	end = i;
 	str = (char *)ft_calloc(end - start + 2, sizeof(char));
@@ -42,10 +42,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/*int main(int argc, char **argv)
-{
-    char s1[] =  "3211123Hllo2213";
-    char set[] = "123";
-    printf("%s", ft_strtrim(NULL, NULL));
-    return 0;
-}*/
+// int main(int argc, char **argv)
+// {
+//     char s1[] =  "12312heheheh33112";
+//     char set[] = "123";
+//     printf("%s", ft_strtrim(s1, set));
+//     return 0;
+// }

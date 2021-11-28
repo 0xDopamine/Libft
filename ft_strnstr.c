@@ -6,7 +6,7 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:31:22 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 15:55:27 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/25 17:52:11 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,32 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *small, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	k;
 
 	i = 0;
 	j = 0;
-	if (small[j] == '\0' && len == 0)
-		return ((char *)big);
-	if (len == 0)
+	if (!*needle)
+		return ((char *)haystack);
+	if ((!needle && !haystack) || len == 0)
 		return (NULL);
-	if (small == NULL && big == NULL)
-		return (NULL);
-	while (big[i] && i < len)
+	while (haystack[i] && i < len)
 	{
 		j = 0;
-		if (big[i] == small[j])
+		if (haystack[i] == needle[j])
 		{
-			k = i;
-			while ((big[k] == small[j]) && small[j] && k < len)
-			{
-				k++;
+			while ((haystack[i + j] == needle[j]) && needle[j] && i + j < len)
 				j++;
-			}
 		}
-		if (small[j] == '\0')
-			return ((char *)big + i);
+		if (needle[j] == '\0')
+			return ((char *)haystack + i);
 		i++;
 	}
 	return (NULL);
 }
+
 /*int	main(int argc, char **argv)
 {
 	(void)argc;

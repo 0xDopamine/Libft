@@ -6,11 +6,10 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 18:02:26 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 16:57:31 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/26 13:56:20 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	countdigit(int nb)
@@ -26,7 +25,7 @@ static int	countdigit(int nb)
 	return (count);
 }
 
-static char	*magic(char *str, int n, int count, int var)
+static char	*calres(char *str, int n, int count, int var)
 {
 	int	res;
 
@@ -73,7 +72,7 @@ char	*ft_itoa(int n)
 	str = (char *)ft_calloc(count + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	return (magic(str, n, count, var));
+	return (calres(str, n, count, var));
 }
 
 /*int main()

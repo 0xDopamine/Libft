@@ -6,12 +6,11 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:54:10 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 17:02:46 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:31:14 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <fcntl.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

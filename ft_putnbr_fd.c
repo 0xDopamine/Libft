@@ -6,14 +6,11 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 15:05:31 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/20 17:09:32 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:32:55 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
-#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -6,14 +6,11 @@
 /*   By: mbaioumy <mbaioumy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 13:42:57 by mbaioumy          #+#    #+#             */
-/*   Updated: 2021/11/22 17:05:12 by mbaioumy         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:51:59 by mbaioumy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -39,10 +36,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		str[j] = s1[i++];
 	return (str);
 }
-/*int main()
-{
-    char str[] = "i just want this part #############";
-    char *s = ft_substr(str, 5, 20);
-    printf("%s\n", s);
-    return 0;
-}*/
+// int main()
+// {
+//     char str[] = "Amine Hello";
+//     char *s = ft_substr(str, 10, 2);
+//     printf("%s\n", s);
+//     return 0;
+// }
